@@ -10,14 +10,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name="LeaveType")
+@Table(name="leavetype")
 @Getter
 @Setter
 
 public class LeaveType {
-	
 		@Id
-//		@GeneratedValue(strategy = GenerationType.IDENTITY)
+		//@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private long id;
 		private String type;
 		private int noticePeriod;

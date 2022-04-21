@@ -6,6 +6,7 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.example.demo.entities.LeaveType;
@@ -20,14 +21,14 @@ public class LeaveTypeServiceImplementation implements LeaveTypeService{
 
 	// add leave type
 	@Transactional
-	public void addLeaveType(@RequestBody LeaveType leaveType) {
+	public void addLeaveType(LeaveType leaveType) {
 		leaveTypeRepository.save(leaveType);
 		
 	}
 
 	// update leave type
 	@Override
-	public void updateLeaveType(@RequestBody LeaveType leaveType) {
+	public void updateLeaveType(LeaveType leaveType) {
 		leaveTypeRepository.save(leaveType);
 	}
 
